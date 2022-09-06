@@ -1,0 +1,62 @@
+{% extends 'base_ru.html' %}
+{% load static %}
+{% block title %}
+Обратная Связь - The Knowledge Academy
+{% endblock %}
+{% block content %}
+
+{% if message_name %}
+    <br><br><br>
+    <center>
+        <h2>Спасибо {{ message_name }}</h2>
+        <p>Мы получили ваше письмо и ответим в ближайшее время...</p>
+    </center>
+    <br><br><br>
+{% else %}
+    <div class="content-contact">
+        <div class="contacts">
+            <div class="visitka">
+                <div class="visitka-img-widget">
+                    <img class="visitka-img" src="{% static 'img/gps-tracker.PNG' %}">
+                </div>
+                <!-- <h5 class="visitka-header">REACH US</h5> -->
+                <p class="visitka-body"><b>ИЗМЕНИТЬ АДРЕС</b></p>
+            </div>
+            <div class="visitka">
+                <div class="visitka-img-widget">
+                    <img class="visitka-img" src="{% static 'img/phone.PNG' %}">
+                </div>
+                <!-- <h5 class="visitka-header">CALL US</h5> -->
+                <p class="visitka-body">Домашний номер телефона начальной школы: +998(65)222-40-43</p>
+                <p class="visitka-body">Завуч начальной школы: Эльвира Равильевна +998(90)710-14-42</p>
+                <p class="visitka-body">Завуч старшей школы: Суннат Обидов +998(93)655-57-55</p>
+            </div>
+            <div class="visitka">
+                <div class="visitka-img-widget">
+                    <img src="{% static 'img/message.PNG' %}" alt="">
+                </div>
+                <!-- <h5 class="visitka-header">WRITE US</h5> -->
+                <p class="visitka-body">Поддержка 24/7: <b>ИЗМЕНИТЬ НАЗВАНИЕ ПОДДЕРЖКИ</b></p>
+            </div>
+        </div>
+        <div class="navigation-block">
+            <div class="map-widget">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1533.0855289337194!2d64.41482550093978!3d39.78071639661934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5009e4b2f986ad%3A0x83e835b9575a943d!2sThe%20Knowledge%20Academy(High)!5e0!3m2!1sru!2s!4v1648837214628!5m2!1sru!2s" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   </div>
+            <div class="message-widget">
+                <p class="message-header">Оставьте своё сообщение</p>
+                <form action="{% url 'contact_us_ru' %}" class="message-form" method="post">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Ваше Имя" class="message-name" required name="message_name">
+                    <!-- <select name="" class="select-form" required>
+                        <option value="" class="option-form">Teacher</option>
+                        <option value="" class="option-form">Student</option>
+                    </select> -->
+                    <input type="email" placeholder="Электронная почта" class="message-email" required name="message_email">
+                    <textarea name="message" id="" placeholder="Ваше сообщение и контактные данные" class="message-textarea" required></textarea>
+                    <button type="submit" class="message-button form-control">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

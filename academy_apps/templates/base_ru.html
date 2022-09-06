@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+</head>
+<body>
+    <!--! NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-widget-logo no-ph">
+            <img src="{% static 'img/TKA.png' %}" alt="" class="nav-logo">
+        </div>
+        <div class="nav-widget">
+            <ul class="menu">
+                <a href="{% url 'index_ru' %}">
+                    <li class="li-nav">Главная</li>
+                </a>
+                <a href="{% url 'contact_us_ru' %}" class="nav-a">
+                    <li class="li-nav">Обратная Связь</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <!--! NAVBAR -->
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- !Start mastering your future! Apply now for a study place -->
+    <div class="pre-footer-original">
+        <div class="pre-footer">
+            <div class="content-text">
+                <div class="title">
+                    <p class="title-p">Сделайте шаг к успешному будущему своего ребенка ! <br> Подайте заявку на учебу</p>
+                </div>
+                <div class="pre-footer-btn">
+                    <a href="{% url 'contact_us_ru' %}">
+                        <button class="btn1">
+                            <p class="p-btn">Вперёд!</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--! PRE-FOOTER -->
+
+    <!--! Footer -->
+    <footer class="footer-widget">
+        <div class="foot-widget">
+            <div class="foot-logo">
+                <img src="{% static 'img/tka-reverse.png' %}" alt="">
+            </div>
+        </div>
+        <div class="footer-widget-list">
+            <div class="foot-widget-list">
+                <p><a href="{% url 'index_ru' %}">Главная</a></p>
+                <p><a href="{% url 'contact_us_ru' %}">Обратная связь</a></p>
+                <p><a href="***">Instagram</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-designed">
+        <div class="designed">
+            <p>Designed by <a href="https://www.instagram.com/grifdylius/">Grifdylius</a> for The Knowledge Academy.</p>
+        </div>
+        <div class="icons no-ph">
+            <div style="display: block; margin-top: auto; margin-bottom: auto;">
+                <a href="https://t.me/grifdylius">
+                    <img src="{% static 'img/icons/telegram.png' %}" alt="Telegram">
+                </a>
+            <a href="https://www.instagram.com/grifdylius/">
+                <img src="{% static 'img/icons/icons8-instagram-480.png' %}" alt="Instagram">
+            </a>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/scrool_script.js' %}"></script>
+    <script src="{% static 'js/test.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+</body>
+</html>
