@@ -1,12 +1,28 @@
+@font-face {
+    font-family: "BLOGGER";
+    font-style: normal;
+    src: url('../fonts/BLOGGER_SANS-MEDIUM_ITALIC.OTF');
+}
 body{
     margin: 0;
-    font-family: 'Poppins';
+    font-family: 'BLOGGER';
 }
 ul{
     list-style: none;
 }
 a{
     text-decoration: none;
+}
+.text-right-second .text-right-second-p{
+    margin: 0;
+    font-size: 23px;
+    margin: 0 0 0 30px;
+}
+.text-right-h2-pc{
+    margin: 0;
+}
+.text-left-h2{
+    margin: 0;
 }
 /* ! Carausel */
 .item img{
@@ -50,9 +66,6 @@ a{
 .ien-25{
     font-size: 25px;
 }
-.text-right-h2-pc{
-    margin-left: 40px;
-}
 .main-text-pc{
     margin-left: 40px;
 }
@@ -75,7 +88,6 @@ a{
 }
 .text-right-first{
     width: 47%; 
-    margin-left: 3%;
 }
 .text-right-first h2{
     margin: 20px 0; 
@@ -89,8 +101,8 @@ a{
     text-align: end;
 }
 .text-right-second .h2{
-    margin: 0 20px; 
     font-size: 40px;
+    margin: 0;
 }
 .text-right-second p{
     font-size: 23px;
@@ -103,19 +115,25 @@ a{
 /* !=====================================! */
 .container{
     display: flex;
+    margin-bottom: 2%;
 }
 .container-about-reverse-img{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+}
+.container-about-reverse-img img{
+    width: 80%;
 }
 .container img{
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    height: 110vh;
 }
 .text-right p{
-    /* font-size: 29px; */
-    opacity: .6;
-    margin: 20px;
+    font-size: 25px;
+    opacity: .5;
+    margin: 20px 0 20px 0;
 }
 /* !== info_about_block ==! */
 .info_about_block{
@@ -147,7 +165,7 @@ a{
 }
 .info-about-card p{
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -162,13 +180,13 @@ a{
 }
 /* !=====================================! */
 .navbar{
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: white;
     background-color: #3D004E;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'BLOGGER';
 }
 .menu{
     display: flex;
@@ -186,7 +204,7 @@ a{
 .nav-logo{
     width: 200px;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .nav_logo_text{
     font-size: 25px;
@@ -362,7 +380,7 @@ header{
     background-color: #3d004e;
 }
 .header-text p{
-    font-family:'Poppins', sans-serif;
+    font-family:'BLOGGER';
     font-size: 40px;
     line-height: 53px;
     font-weight: 300;
@@ -371,7 +389,7 @@ header{
     color: white;
 }
 .header-text-button{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'BLOGGER';
     font-weight: bold;
 }
 
@@ -532,21 +550,20 @@ header{
 }
 .text-right h2{
     font-size: 32px;
-    margin: 0 0 20px 20px;
 }
 .text-right .main_text{
-    margin: 20px 40px 20px 15px;
+    margin: 13px 40px 0 0;
 }
 .text-right .line{
     height: 2px; 
     width: 100px; 
-    margin: 10px 20px;
     background-color: #E1E1E1;
 }
 .main_text{
     color: #777777;
-    margin: 20px 40px 50px 15px;
+    margin: 13px 0px 0px 30px;
     opacity: .6;
+    font-size: 25px;
 }
 .button-right a{
     display: flex;
@@ -576,7 +593,7 @@ header{
     box-shadow: #ce8cde 0 10px 10px 3px;
 }
 .btn-next{
-    width: 90%;
+    width: 97%;
     height: 60px;
     font-weight: bold;
     border-radius: 80px;
@@ -611,6 +628,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .image-card img{
     width: 80%;
@@ -623,27 +641,24 @@ header{
 }
 .text-left-p{
     width: 50%; 
-    margin: 40px 0 40px 0;
 }
 .text-left h2{
-    margin-right: 40px;
     font-size: 32px;
 }
 .text-left .pre-text{
     color: black;
-    margin: 0 40px 20px 15px;
+    margin: 0 0 20px 15px;
     opacity: .6;
     font-size: 29px;
 }
 .header-text-top{
     font-size: 20px;
-    margin: 0 40px 20px 15px;
+    margin: 0 0 20px 0;
 }
 .text-left .line{
     height: 2px; 
     width: 100px;
     align-self: flex-end;
-    margin-right: 40px;
     background-color: #E1E1E1;
 }
 .interblock{
@@ -676,12 +691,12 @@ header{
     margin-right: 3%;
 }
 .image-card-right img{
-    width: 426px;
-    height: 426px;
+    width: 350px;
+    height: 350px;
 }
 .image-card-left img {
-    width: 426px;
-    height: 426px;
+    width: 350px;
+    height: 350px;
 }
 .image-card-left{
     width: 48%;
@@ -796,7 +811,7 @@ header{
 }
 .p-btn{
     /* padding-top: 3px; */
-    font-family: 'Poppins';
+    font-family: 'BLOGGER';
     font-weight: bolder;
     font-size: 25px;
     margin: 0;
@@ -1246,14 +1261,14 @@ footer{
     margin-bottom: 3%;
 }
 .text-card p{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'BLOGGER';
     font-weight: 600;
     font-size: large;
     color: black;
 }
 .date-publish-card{
     margin-top: 13px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'BLOGGER';
     font-weight: bold;
     font-size: 20px;
     display: flex;
@@ -1439,7 +1454,7 @@ footer{
     width: 78.4%;
 }
 .news-card-header{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'BLOGGER';
     font-weight: lighter;
 }
 .news-card-header a{
@@ -1463,7 +1478,7 @@ footer{
     margin-bottom: 5%;
 }
 .news-widget-title{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'BLOGGER';
     font-weight: bold;
     font-size: xx-large;
     width: 31.7%;
@@ -1656,7 +1671,7 @@ footer{
         width: 100%;
         flex-wrap: wrap;
         text-align: center;
-        /* margin-right: 10px; */
+        display: block;
     }
     .icons{
         width: 100%;
@@ -1768,6 +1783,9 @@ footer{
         flex-direction: column;
         justify-content: center;
         margin: 10% 0;
+    }
+    .container img{
+        height: auto;
     }
     .container-about{
         display: flex;
@@ -1890,9 +1908,10 @@ footer{
         margin: 10px;
         opacity: .6;
         text-align: center;
+        margin: 0 22px;
     }
     .main_text{
-        margin: 10px;
+        margin: 0 30px;
     }
     .header-text-top{
         font-size: 27px;
@@ -1909,7 +1928,7 @@ footer{
     }
     .main-text-pc{
         width: auto;
-        margin: 10px;
+        margin: 0 20px;
     }
     .main_p{
         width: auto; 
@@ -1929,5 +1948,11 @@ footer{
     }
     .modal-img{
         width: 100%;
+    }
+    .text-right p{
+        margin: 0 20px;
+    }
+    .text-right-second .text-right-second-p{
+        margin: 0 20px;
     }
 }
